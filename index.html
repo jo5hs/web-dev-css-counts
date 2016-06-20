@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1 class="text-center">Forms &amp; Things</h1>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <p>The man who passes the sentence should swing the sword.</p>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="John Snow" />
+
+                <label for="otherName">Your Phonetic Name</label>
+                <input type="text" id="otherName" placeholder="jan sno" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Billing Address</legend>
+                <p>Over a period of several weeks, the competitors must fight to the death. The last tribute standing wins.</p>
+
+                <label for="street">Street</label>
+                <input type="text" id="street" />
+
+                <label for="street2">
+                <input type="text" id="street2" placeholder="Victors Village" />
+
+                <label for="district">District</label>
+                <select id="district">
+                    <option value="district1">District 1</option>
+                    <option value="district2">District 2</option>
+                    <option value="district3">District 3</option>
+                    <option value="district4">District 4</option>
+                    <option value="district5">District 5</option>
+                    <option value="district6">District 6</option>
+                    <option value="district7">District 7</option>
+                    <option value="district8">District 8</option>
+                    <option value="district9">District 9</option>
+                    <option value="district10">District 10</option>
+                    <option value="district11">District 11</option>
+                    <option value="district12" selected>District 12</option>
+                    <option value="district13" disabled>District 13</option>
+                </select>
+
+                <label for="country">Country</label>
+                <select id="country">
+                    <option value="panem" selected>Panem</option>
+                    <option value="wilds">Northern Wilds</option>
+                    <option value="unknown">Unknown/Other</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Shipping Options</legend>
+                <p>Here&rsquo;s how it is: The Earth got used up, so we moved out, and terraformed a whole new galaxy of Earths, some rich and flush with new technologies, some not so much.</p>
+
+                <input type="radio" name="shipping" value="serenity" checked/>Serenity<br />
+                <input type="radio" name="shipping" value="good-news-everyone" />Planet Express<br />
+                <input type="radio" name="shipping" value="andiorian"/>Andorian Freighter Co.
+
+
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </body>
+</html>

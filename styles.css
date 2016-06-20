@@ -1,0 +1,242 @@
+/**
+ * CONTENTS
+ *
+ * GENERIC
+ * Normalize.css........A level playing field
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Page Defaults........Just the basic stuff
+ * Headings.............H1–H6 styles.
+ *
+ * FORM
+ * Form Default.........Default form styles
+ * Custom Form Styles...Form customization
+ * Buttons..............Button elements.
+ *
+ * HELPERS..............Basic helpers
+ *
+ * COUNTING
+ * Yeah.................Awesome
+ */
+
+/*------------------------------------*\
+    #GENERIC
+\*------------------------------------*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Lato:400,700|Slabo+27px");
+/* Usage:
+ * font-family: 'Slabo 27px', serif;
+ * font-family: 'Lato', sans-serif;
+ * font-family: 'Gloria Hallelujah', cursive;
+*/
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+html {
+  background-color: #ecf0f1;
+}
+body {
+  color:#666;
+  font-family: 'Lato', sans-serif;
+  font-size:100%;
+  font-weight: normal;
+  width:80%;
+  margin:0 auto;
+  padding:2em 0;
+}
+@media (min-width:960px) {
+  body { width:60%; }
+}
+h1, h2, h3, h4 {
+  font-family: 'Slabo 27px', serif;
+  color:#2c3e50;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+h5, h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+h1 { font-size:3em; }
+h2 { font-size:2.5em; }
+h3 { font-size:2em; }
+h4 { font-size:1.5em; }
+h5 { font-size:1.25em; }
+h6 { font-size:1em; text-transform: uppercase; color:#95a5a6; }
+
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p {
+  margin-top: 0;
+}
+p {
+  line-height: 1.6;
+}
+
+/*------------------------------------*\
+    #FORM
+\*------------------------------------*/
+form {
+  padding:2em 0;
+}
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  display:block;
+  width:100%;
+  margin-bottom:2em;
+}
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0;
+}
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
+legend {
+  float:left; /* push legend into fieldset padding */
+  font-family: 'Slabo 27px', serif;
+  color:#2c3e50;
+  font-weight: normal;
+  font-size:1.5em;
+}
+legend + p {
+  clear:both;
+  margin-bottom: 1.5em;
+}
+fieldset {
+  padding: 2em;
+  border-width: 0;
+}
+@media (min-width:960px) {
+  fieldset {
+    padding:4em;
+  }
+}
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-bottom: 1em;
+}
+input[id="street"] {
+  margin-bottom: 1em;
+}
+
+/* Button default */
+.btn,
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 50px;
+  padding: 0 35px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 46px;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius:6px;
+  cursor: pointer;
+  border:0;
+  -webkit-appearance: none;
+  appearance:none;
+  box-sizing: border-box;
+}
+button[type="submit"] {
+  background-color:#3498db;
+  color:#ecf0f1;
+  position: relative;
+  z-index: 10;
+  box-shadow:0 0 0 5px #ecf0f1;
+  margin-left:-2em;
+}
+@media (min-width:960px) {
+  button[type="submit"] {
+    margin-left:0;
+  }
+}
+
+/*------------------------------------*\
+    #BASIC HELPERS
+\*------------------------------------*/
+.full-width {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+.max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.muted {
+  color:#666;
+}
+.text-center  { text-align:center; }
+.text-left    { text-align:left; }
+.text-right   { text-align:right; }
+
+/*------------------------------------*\
+    #COUNTER
+\*------------------------------------*/
