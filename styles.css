@@ -24,7 +24,7 @@
     #GENERIC
 \*------------------------------------*/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css");
-@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Lato:400,700|Slabo+27px");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Slabo+27px");
 /* Usage:
  * font-family: 'Slabo 27px', serif;
  * font-family: 'Lato', sans-serif;
@@ -237,6 +237,60 @@ button[type="submit"] {
 .text-left    { text-align:left; }
 .text-right   { text-align:right; }
 
+
+
 /*------------------------------------*\
     #COUNTER
 \*------------------------------------*/
+
+form {
+  counter-reset: steps;
+}
+form > fieldset {
+  /* Increment the section counter*/
+  counter-increment: steps;
+
+  /*Set relative so we can position number*/
+  position:relative;
+}
+form > fieldset::before {
+  content: counter(steps);
+
+/* some styles for that number */
+  position:absolute;
+  top:.7em;
+  left:-2em;
+  padding:.3em .6em;
+  border-radius: 100%;
+  background-color: #3498db;
+  font-size:1.5em;
+  color:#ecf0f1;
+  z-index: 2;
+  border:.3em solid #ecf0f1;
+}
+
+
+form > fieldset::after {
+  content:'';
+  width:.5em;
+  height:calc(100% - 1em);
+  position:absolute;
+  z-index: 1;
+  top:4em;
+  left:-1.4em;
+  background-color:#3498db;
+}
+form > fieldset:last-child::after {
+  display: none;
+}
+
+@media (min-width:960px) {
+  form > fieldset::before {
+    top:2em;
+    left:-.5em;
+  }
+  form > fieldset::after {
+    top:5em;
+    left:.8em;
+  }
+}
